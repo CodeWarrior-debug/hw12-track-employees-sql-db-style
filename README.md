@@ -6,7 +6,7 @@ Developers are often tasked with creating interfaces that make it easy for non-d
 
 Design the following database schema containing three tables:
 
-![Database Schema](Assets/schema.png)
+<!-- ![Database Schema](Assets/schema.png)
 
 * **department**:
 
@@ -26,7 +26,7 @@ Design the following database schema containing three tables:
   * **first_name** - VARCHAR(30) to hold employee first name
   * **last_name** - VARCHAR(30) to hold employee last name
   * **role_id** - INT to hold reference to role employee has
-  * **manager_id** - INT to hold reference to another employee that manages the employee being Created. This field may be null if the employee has no manager
+  * **manager_id** - INT to hold reference to another employee that manages the employee being Created. This field may be null if the employee has no manager -->
   
 Build a command-line application that at a minimum allows the user to:
 
