@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 })
 
 const viewTbl = () => {
-    let queryStr = 'SELECT employee.first_name, employee.last_name, role.title, department.name, role.salary FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON department.id = role.department_id;';
+    let queryStr = "SELECT e.id AS 'id', e.first_name, e.last_name, role.title, department.name, role.salary, IFNULL(CONCAT(m.first_name,' ', m.last_name),'No Supervisor') As manager FROM employee e LEFT JOIN role ON e.role_id = role.id LEFT JOIN department ON department.id = role.department_id LEFT JOIN employee m ON m.id = e.manager_id;"
     connection.query(queryStr, (err, res) => {
         if (err) throw err;
         console.table(res);
@@ -90,13 +90,11 @@ const visEEs = () => {
     connection.query(queryStr, (err, res) => {
         if (err) throw err;
         console.table(res);
-        // connection.end();
         selectionMenu();
     });
 };
 connection.connect((err) => {
     if (err) throw err; //console.log(`connected as id ${connection.id}`)
-    console.log("connected!");
     selectionMenu();// error will be an Error if one occurred during the query// results will contain the results of the query// fields will contain information about the returned results fields (if any)
 });
 
