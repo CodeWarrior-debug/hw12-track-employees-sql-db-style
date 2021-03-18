@@ -2,7 +2,7 @@
 
   ## Table of Contents
   ---
-  * [Description](#description) | [Installation](#installation) | [Tests](#tests)| [Usage](#usage) | [Contributing](#contributing) | [Questions](#questions) | [License](#license)
+  * [Description](#description) | [Installation](#installation) | [Tests](#tests) | [Usage](#usage) | [Contributing](#contributing) | [Questions](#questions) | [Links](#links) | [Previews](#previews) | [License](#license)
 
   ## Description
   ---
